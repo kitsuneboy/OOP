@@ -24,8 +24,8 @@ class Book:
 
 rewiew1 = BookRew("Alex", "Good")
 rewiew2 = BookRew("Matt", "Fantastic")
-book1 = Book("Марио Пьюзо", "Крёстный отец", rewiew1)
-book2 = Book("Александр Дюма", "Граф Монте-Кристо", rewiew2)
+book1 = Book("Марио Пьюзо", "Крёстный отец\n", rewiew1)
+book2 = Book("Александр Дюма", "Граф Монте-Кристо\n", rewiew2)
 print(book1)
 print(book2)
 
