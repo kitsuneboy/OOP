@@ -1,29 +1,31 @@
 # Создайте класс, описывающий отзыв к книге. Добавьте в класс книги поле – список отзывов. Сделайте
 # так, что при выводе книги на экран при помощи функции print также будут выводиться отзывы к ней.
 
-class BookRewiew:
-    feedback_list = "Good!"
-    feedback_list1 = "Gooood!"
-    feedback_list2 = "Okay!"
+class BookRew:
+
+    def __init__(self, user, rewiew):
+        self.user = user
+        self.rewiew = rewiew
+
+    def __str__(self):
+        return 'Rewiews: %s says "%s"' % (self.user, self.rewiew)
 
 
-class Book(BookRewiew):
+class Book:
 
-    def __init__(self, author, title, year, genre):
+    def __init__(self, author, title, rewiews):
         self.author = author
         self.title = title
-        self.year = year
-        self.genre = genre
+        self.rewiews = rewiews
 
-    def print_info(self):
-        print("Автор: ", self.author)
-        print("Название: ", self.title)
-        print("Год издания: ", self.year)
-        print("Жанр :", self.genre)
-        print()
-        print("Cписок отзывов:", self.feedback_list, self.feedback_list1, self.feedback_list2, sep=" | ")
+    def __str__(self):
+        return 'Book: %s - %s  %s' % (self.author, self.title, self.rewiews)
 
 
-book1 = Book("Марио Пьюзо", "Крёстный отец", 1969, "драма")
-book1.print_info()
+rewiew1 = BookRew("Alex", "Good")
+rewiew2 = BookRew("Matt", "Fantastic")
+book1 = Book("Марио Пьюзо", "Крёстный отец", rewiew1)
+book2 = Book("Александр Дюма", "Граф Монте-Кристо", rewiew2)
+print(book1)
+print(book2)
 
