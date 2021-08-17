@@ -7,7 +7,7 @@ class MyReverse:
         return self
 
     def __next__(self):
-        for item in range(self.list):
+        for item in self.list:
             return item
 
     def __reversed__(self):
